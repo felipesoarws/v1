@@ -187,22 +187,21 @@ header nav ul a.selected {
 
 main {
   margin: 3rem 2rem;
-}
-
-@media (min-width: 768px) {
-  main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    padding: 2rem;
-    margin: 2rem 0;
-    height: 100%;
-  }
+  height: 100% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  margin: 2rem 0;
 }
 
 main .content .title h1 {
@@ -239,7 +238,12 @@ main .projects .project {
   padding: 1rem;
   border: 1px solid #2d323f;
   border-radius: 0.3rem;
-  background-color: #010409;
+}
+
+main .projects .project:hover img,
+main .projects .project:hover .live {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 main .projects .project .title h2 {
@@ -255,6 +259,8 @@ main .projects .project .bg {
 main .projects .project .bg img {
   border-radius: 0.6rem;
   width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 main .projects .project .bg .live {
@@ -263,6 +269,8 @@ main .projects .project .bg .live {
   left: 0;
   right: 0;
   bottom: 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 main .projects .project .bg .live a {
