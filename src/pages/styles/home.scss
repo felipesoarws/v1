@@ -1,0 +1,303 @@
+@import "reset";
+
+body {
+    transition: all 0.3s ease-in-out;
+    background-color: $light-gray;
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .themes {
+            padding: 0.7rem 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .colors {
+                display: none;
+                span {
+                    display: block;
+                    width: 0.8rem;
+                    height: 0.8rem;
+                    background-color: $gray;
+                    border-radius: 2rem;
+                    margin: 0.23rem 0.25rem;
+                }
+                @media screen and (min-width: 768px) {
+                    display: flex;
+                }
+            }
+            .title {
+                h1 {
+                    color: #4b4f54;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+
+                    @media screen and (min-width: 768px) {
+                        margin-left: 5rem;
+                    }
+                }
+            }
+        }
+        nav {
+            box-shadow: 0 10px 10px 0px rgba($color: #000000, $alpha: 0.4);
+            height: 3.7rem;
+            width: 100%;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background-color: $dark-gray;
+
+                @media screen and (min-width: 768px) {
+                    justify-content: start;
+                }
+
+                li {
+                    background-color: $dark-gray;
+                    width: 33.3vw;
+                    display: block;
+                    border: 1px solid #2d323f;
+                    color: $gray;
+                    font-size: 0.9rem;
+
+                    @media screen and (min-width: 768px) {
+                        width: 20vw;
+                    }
+
+                    @media screen and (min-width: 1000px) {
+                        width: 13vw;
+                    }
+                    &.selected {
+                        background-color: $light-gray;
+                        color: $yellow;
+                        border: 0;
+                        border-top: 2px solid $light-red;
+                    }
+                }
+
+                a {
+                    color: $gray;
+                    display: block;
+                    padding: 0.7rem 1rem;
+                    width: 33.3vw;
+
+                    @media screen and (min-width: 768px) {
+                        width: 20vw;
+                    }
+
+                    @media screen and (min-width: 1000px) {
+                        width: 13vw;
+                    }
+                    &.selected {
+                        background-color: $light-gray;
+                        color: $yellow;
+                        border: 0;
+                        border-top: 2px solid $light-red;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        min-height: 70vh;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem;
+            height: 75vh;
+            margin: 2rem 0;
+        }
+        @media screen and (min-width: 1200px) {
+            margin: 0;
+        }
+
+        .content {
+            text-align: center;
+            margin: 2.3rem 2rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            @media screen and (min-width: 768px) {
+                text-align: center;
+            }
+
+            @media screen and (min-width: 1024px) {
+                text-align: left;
+            }
+
+            .texts {
+                width: 100%;
+                span.name {
+                    display: inline;
+                    font-size: 2.2rem;
+                    color: $yellow;
+                    font-weight: bold;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 4.5rem;
+                        display: block;
+                    }
+                }
+            }
+
+            span,
+            h1 {
+                color: $white;
+            }
+
+            span {
+                font-size: 0.9rem;
+                display: block;
+                margin: 0.4rem 0;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                font-weight: 600;
+                color: $yellow;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 4.5rem;
+                    line-height: 0.8;
+                    margin: 1rem 0;
+                }
+            }
+
+            p {
+                color: $white;
+                font-size: 0.9rem;
+
+                span.color {
+                    display: inline;
+                    color: #936ac4;
+                    font-weight: bold;
+                    font-size: 1rem;
+                }
+
+                @media screen and (min-width: 768px) {
+                    font-size: 1rem;
+                }
+            }
+
+            .code {
+                margin: 4rem 0;
+                position: relative;
+                text-align: center;
+                p {
+                    color: $white;
+                    font-size: 0.9rem;
+                }
+
+                .input {
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    gap: 0.4rem;
+                    position: relative;
+
+                    span {
+                        color: pink;
+                        font-size: 1.2rem;
+                    }
+
+                    input {
+                        background-color: transparent;
+                        outline: 0;
+                        border: 0;
+                        color: pink;
+                        font-size: 0.9rem;
+
+                        &::placeholder {
+                            color: rgba(255, 192, 203, 0.4);
+                        }
+                    }
+                }
+
+                span.line {
+                    position: absolute;
+                    display: block;
+                    height: 0.12rem;
+                    width: 0.7rem;
+                    background-color: pink;
+                    bottom: 0;
+                    left: 1.2rem;
+                }
+            }
+        }
+
+        .bg {
+            display: none;
+            @media screen and (min-width: 1000px) {
+                display: block;
+            }
+            img {
+                width: 23rem;
+                filter: drop-shadow(5px 5px 15px rgba(147, 106, 196, 0.1));
+            }
+        }
+    }
+
+    footer {
+        border-top: 1px solid #2d323f;
+        padding: 1rem 1rem;
+
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.7rem;
+
+            @media screen and (min-width: 528px) {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+
+            .f-line {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .s-line {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.3rem;
+            }
+        }
+
+        p {
+            color: $gray;
+            font-size: 0.9rem;
+            margin: 0 0.2rem;
+            font-weight: 500;
+        }
+
+        span {
+            color: #936ac4;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        svg {
+            margin: 0 0.2rem;
+            font-size: 1.3rem;
+            color: $gray;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

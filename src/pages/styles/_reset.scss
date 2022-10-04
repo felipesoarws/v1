@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    text-decoration-color: white;
+    scroll-behavior: smooth;
+    font-family: "Fira Code", monospace;
+
+    html {
+        $scrollbarBG: #bdc1c1;
+        $thumbBG: #030405;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    body::-webkit-scrollbar {
+        width: 13px;
+    }
+    body {
+        scrollbar-width: thin;
+        scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-track {
+        background: var(--scrollbarBG);
+    }
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--thumbBG);
+        border-radius: 20px;
+        border: 3px solid var(--scrollbarBG);
+    }
+}
+
+$dark-gray: #010409;
+$light-gray: #0d1117;
+$white: white;
+$gray: #8b949e;
+$bg-gray: #c9caca;
+$light-red: #bf616a;
+$yellow: #d7a84b;
