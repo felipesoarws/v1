@@ -227,6 +227,13 @@ export default function About() {
                   <span className="open_folder">sass</span>
                 </div>
               </div>
+              <div className="react">
+                <div className="folder_n_name">
+                  <i className="fa-brands fa-react-alt"></i>
+
+                  <span className="open_folder">react</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
