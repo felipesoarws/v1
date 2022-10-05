@@ -229,7 +229,7 @@ export default function About() {
               </div>
               <div className="react">
                 <div className="folder_n_name">
-                  <i className="fa-brands fa-react-alt"></i>
+                  <i className="fa-brands fa-react"></i>
 
                   <span className="open_folder">react</span>
                 </div>
