@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 
+import "./styles/home.scss";
+
 // AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-import "./styles/home.scss";
 
 // images
 import notebook_screen from "./assets/notebook.png";
@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <div>
-      <header>
+      <header className="style-home">
         <div className="themes">
           <div
             className="colors"
@@ -64,7 +64,7 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main className="style-home">
         <div className="content">
           <div className="texts" data-aos="fade-up" data-aos-duration="2000">
             <span> Olá! Eu sou </span>
@@ -95,7 +95,40 @@ export default function Home() {
           <img src={notebook_screen} alt="" />
         </div>
       </main>
-      <footer></footer>
+      <footer className="style-home">
+        <div class="contact">
+          <div class="f-line">
+            <p>Contate-me em:</p>
+            <div class="sms">
+              <a
+                href="https://github.com/felipesoarws"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/felipesoarws/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/felipe-soares-aa7ba3200/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="s-line">
+            <p>ou em </p>
+            <span>felipesoarwz@gmail.com</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function About({ title, image, url, data_duration }) {
         <h2>{title}</h2>
       </div>
       <div className="bg">
-        <img src={image} alt="demonstração imagem" />
+        <img src={image} alt="demonstração imagem"></img>
         <div className="live">
           <a target="_blank" href={url} rel="noreferrer">
             veja o projeto

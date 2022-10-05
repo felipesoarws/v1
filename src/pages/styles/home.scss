@@ -4,7 +4,7 @@ body {
     transition: all 0.3s ease-in-out;
     background-color: $light-gray;
 
-    header {
+    header.style-home {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -104,12 +104,14 @@ body {
             }
         }
     }
-    main {
+    main.style-home {
         min-height: 70vh;
+
         @media screen and (min-width: 768px) {
             display: flex;
             align-items: center;
             justify-content: space-around;
+            flex-direction: row;
             padding: 2rem;
             height: 75vh;
             margin: 2rem 0;
@@ -246,7 +248,7 @@ body {
         }
     }
 
-    footer {
+    footer.style-home {
         border-top: 1px solid #2d323f;
         padding: 1rem 1rem;
 

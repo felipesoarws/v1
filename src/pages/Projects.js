@@ -26,7 +26,7 @@ export default function About() {
 
   return (
     <div>
-      <header>
+      <header className="style-projects">
         <div className="themes">
           <div
             className="colors"
@@ -57,7 +57,7 @@ export default function About() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main className="style-projects">
         <div className="content">
           <div className="title" data-aos="fade-right" data-aos-duration="2000">
             <h1>⌠⌠ Meus projetos favoritos</h1>
@@ -121,7 +121,7 @@ export default function About() {
           />
         </div>
       </main>
-      <footer>
+      <footer className="style-projects">
         <div className="contact">
           <div className="f-line">
             <p>Contate-me em:</p>

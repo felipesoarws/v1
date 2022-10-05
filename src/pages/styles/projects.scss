@@ -5,7 +5,7 @@ body {
     background-color: $light-gray;
 }
 
-header {
+header.style-projects {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,6 +83,7 @@ header {
             }
 
             a {
+                color: $gray;
                 display: block;
                 padding: 0.7rem 1rem;
                 width: 33.3vw;
@@ -105,7 +106,7 @@ header {
     }
 }
 
-main {
+main.style-projects {
     margin: 3rem 2rem;
     height: 100% !important;
     display: flex;
@@ -189,7 +190,7 @@ main {
     }
 }
 
-footer {
+footer.style-projects {
     border-top: 1px solid #2d323f;
     padding: 1rem 1rem;
 
