@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./styles/about.scss";
 
@@ -9,8 +9,61 @@ import "aos/dist/aos.css";
 
 export default function About() {
   useEffect(() => {
+    document.title = "Sobre | @felipesoarws";
+
     AOS.init();
   }, []);
+
+  // conteudos dos arquivos
+
+  const bioDescRef = useRef();
+  const interestsDescRef = useRef();
+  const educationDescRef = useRef();
+  const DescsRefs = useRef();
+
+  const filesFolder = (e) => {
+    // conteudo do clique nas pastas
+    const fileValue = e.target.textContent;
+
+    const bioDesc = bioDescRef.current;
+    const interestsDesc = interestsDescRef.current;
+    const educationDesc = educationDescRef.current;
+
+    checkFile(fileValue, bioDesc, interestsDesc, educationDesc);
+  };
+
+  const checkFile = (fileValue, bio, interests, education) => {
+    if (fileValue === "bio") {
+      viewFileSelected(bio);
+    } else if (fileValue === "interesses") {
+      viewFileSelected(interests);
+    } else if (fileValue === "educação") {
+      viewFileSelected(education);
+    } else {
+      return;
+    }
+  };
+
+  const viewFileSelected = (file) => {
+    resetFiles();
+    openFile(file);
+  };
+
+  const resetFiles = () => {
+    const Descs = DescsRefs.current.querySelectorAll(".file");
+
+    Descs.forEach((desc) => {
+      closeFile(desc);
+    });
+  };
+  const openFile = (file) => {
+    file.classList.remove("closed");
+  };
+
+  const closeFile = (file) => {
+    file.classList.add("closed");
+  };
+
   return (
     <div>
       <header className="style-about">
@@ -64,7 +117,9 @@ export default function About() {
               >
                 <div className="folder_n_name bio">
                   <i className="fa-solid fa-folder-closed "></i>
-                  <span className="open_folder">bio</span>
+                  <span className="open_folder" onClick={filesFolder}>
+                    bio
+                  </span>
                 </div>
               </div>
               <div
@@ -74,7 +129,9 @@ export default function About() {
               >
                 <div className="folder_n_name interests">
                   <i className="fa-solid fa-folder-closed "></i>
-                  <span className="open_folder">interesses</span>
+                  <span className="open_folder" onClick={filesFolder}>
+                    interesses
+                  </span>
                 </div>
               </div>
               <div
@@ -84,7 +141,9 @@ export default function About() {
               >
                 <div className="folder_n_name education">
                   <i className="fa-solid fa-folder-closed "></i>
-                  <span className="open_folder">educação</span>
+                  <span className="open_folder" onClick={filesFolder}>
+                    educação
+                  </span>
                 </div>
               </div>
             </div>
@@ -98,7 +157,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="folder hobbies closed">
+            <div className="folder hobbies ">
               <div className="music">
                 <div className="folder_n_name">
                   <i className="fa-solid fa-headphones"></i>
@@ -141,7 +200,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="folder stacks closed">
+            <div className="folder stacks ">
               <div className="js">
                 <div className="folder_n_name">
                   <i className="fa-brands fa-js"></i>
@@ -172,13 +231,13 @@ export default function About() {
           </div>
         </div>
 
-        <div className="contents">
+        <div className="contents" ref={DescsRefs}>
           <div
             className="about-me"
             data-aos="fade-right"
             data-aos-duration="2800"
           >
-            <div className="file  bio ">
+            <div className="file bio" ref={bioDescRef}>
               <div className="title">
                 <h3>
                   &nbsp;// sobre mim <span className="section"> / bio</span>
@@ -201,7 +260,7 @@ export default function About() {
                   >
                     grasshopper
                   </a>
-                  , onde ele ensina programação para iniciantes.
+                  , onde é ensinado programação para iniciantes.
                 </p>
 
                 <p>
@@ -221,6 +280,7 @@ export default function About() {
               className="file interests closed"
               data-aos="fade-right"
               data-aos-duration="2800"
+              ref={interestsDescRef}
             >
               <div className="title">
                 <h3>
@@ -259,6 +319,7 @@ export default function About() {
               className="file education closed"
               data-aos="fade-right"
               data-aos-duration="2800"
+              ref={educationDescRef}
             >
               <div className="title">
                 <h3>

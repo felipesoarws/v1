@@ -20,6 +20,7 @@ import disneyplus_screen from "./assets/disneyplus_screen.png";
 import calc_screen from "./assets/calc_screen.png";
 
 export default function About() {
+  document.title = "Projetos | @felipesoarws";
   useEffect(() => {
     AOS.init();
   }, []);

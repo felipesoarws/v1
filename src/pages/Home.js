@@ -14,6 +14,8 @@ export default function Home() {
   const submitRef = useRef();
 
   useEffect(() => {
+    document.title = "Hello World! | @felipesoarws";
+
     AOS.init();
 
     const submit = submitRef.current;
@@ -96,34 +98,34 @@ export default function Home() {
         </div>
       </main>
       <footer className="style-home">
-        <div class="contact">
-          <div class="f-line">
+        <div className="contact">
+          <div className="f-line">
             <p>Contate-me em:</p>
-            <div class="sms">
+            <div className="sms">
               <a
                 href="https://github.com/felipesoarws"
                 target="_blank"
                 rel="noreferrer"
               >
-                <i class="fa-brands fa-github"></i>
+                <i className="fa-brands fa-github"></i>
               </a>
               <a
                 href="https://www.instagram.com/felipesoarws/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <i class="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/felipe-soares-aa7ba3200/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <i class="fa-brands fa-linkedin"></i>
+                <i className="fa-brands fa-linkedin"></i>
               </a>
             </div>
           </div>
-          <div class="s-line">
+          <div className="s-line">
             <p>ou em </p>
             <span>felipesoarwz@gmail.com</span>
           </div>

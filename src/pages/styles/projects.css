@@ -40,7 +40,7 @@ body {
   background-color: #0d1117;
 }
 
-header {
+header.style-projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,7 +56,7 @@ header {
           flex-direction: column;
 }
 
-header .themes {
+header.style-projects .themes {
   padding: 0.7rem 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,11 +70,11 @@ header .themes {
   width: 100%;
 }
 
-header .themes .colors {
+header.style-projects .themes .colors {
   display: none;
 }
 
-header .themes .colors span {
+header.style-projects .themes .colors span {
   display: block;
   width: 0.8rem;
   height: 0.8rem;
@@ -84,33 +84,33 @@ header .themes .colors span {
 }
 
 @media screen and (min-width: 768px) {
-  header .themes .colors {
+  header.style-projects .themes .colors {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-header .themes .title h1 {
+header.style-projects .themes .title h1 {
   color: #4b4f54;
   font-size: 0.9rem;
   font-weight: 400;
 }
 
 @media screen and (min-width: 768px) {
-  header .themes .title h1 {
+  header.style-projects .themes .title h1 {
     margin-left: 5rem;
   }
 }
 
-header nav {
+header.style-projects nav {
   -webkit-box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.4);
   height: 3.7rem;
   width: 100%;
 }
 
-header nav ul {
+header.style-projects nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,14 +125,14 @@ header nav ul {
 }
 
 @media screen and (min-width: 768px) {
-  header nav ul {
+  header.style-projects nav ul {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
   }
 }
 
-header nav ul li {
+header.style-projects nav ul li {
   background-color: #010409;
   width: 33.3vw;
   display: block;
@@ -142,50 +142,51 @@ header nav ul li {
 }
 
 @media screen and (min-width: 768px) {
-  header nav ul li {
+  header.style-projects nav ul li {
     width: 20vw;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  header nav ul li {
+  header.style-projects nav ul li {
     width: 13vw;
   }
 }
 
-header nav ul li.selected {
+header.style-projects nav ul li.selected {
   background-color: #0d1117;
   color: #d7a84b;
   border: 0;
   border-top: 2px solid #bf616a;
 }
 
-header nav ul a {
+header.style-projects nav ul a {
+  color: #8b949e;
   display: block;
   padding: 0.7rem 1rem;
   width: 33.3vw;
 }
 
 @media screen and (min-width: 768px) {
-  header nav ul a {
+  header.style-projects nav ul a {
     width: 20vw;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  header nav ul a {
+  header.style-projects nav ul a {
     width: 13vw;
   }
 }
 
-header nav ul a.selected {
+header.style-projects nav ul a.selected {
   background-color: #0d1117;
   color: #d7a84b;
   border: 0;
   border-top: 2px solid #bf616a;
 }
 
-main {
+main.style-projects {
   margin: 3rem 2rem;
   height: 100% !important;
   display: -webkit-box;
@@ -204,12 +205,12 @@ main {
   margin: 2rem 0;
 }
 
-main .content .title h1 {
+main.style-projects .content .title h1 {
   color: white;
   font-size: 1.2rem;
 }
 
-main .projects {
+main.style-projects .projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,43 +228,43 @@ main .projects {
 }
 
 @media screen and (min-width: 768px) {
-  main .projects {
+  main.style-projects .projects {
     gap: 3rem;
     height: 100%;
   }
 }
 
-main .projects .project {
+main.style-projects .projects .project {
   width: 18rem;
   padding: 1rem;
   border: 1px solid #2d323f;
   border-radius: 0.3rem;
 }
 
-main .projects .project:hover img,
-main .projects .project:hover .live {
+main.style-projects .projects .project:hover img,
+main.style-projects .projects .project:hover .live {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
 }
 
-main .projects .project .title h2 {
+main.style-projects .projects .project .title h2 {
   color: #d7a84b;
   font-size: 1rem;
 }
 
-main .projects .project .bg {
+main.style-projects .projects .project .bg {
   margin: 0.8rem 0;
   position: relative;
 }
 
-main .projects .project .bg img {
+main.style-projects .projects .project .bg img {
   border-radius: 0.6rem;
   width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-main .projects .project .bg .live {
+main.style-projects .projects .project .bg .live {
   background-color: #d7a84b;
   position: absolute;
   left: 0;
@@ -273,7 +274,7 @@ main .projects .project .bg .live {
   transition: all 0.3s ease-in-out;
 }
 
-main .projects .project .bg .live a {
+main.style-projects .projects .project .bg .live a {
   display: block;
   color: #010409;
   font-size: 0.9rem;
@@ -282,16 +283,16 @@ main .projects .project .bg .live a {
   transition: all 0.3s ease-in-out;
 }
 
-main .projects .project .bg .live a:hover {
+main.style-projects .projects .project .bg .live a:hover {
   color: white;
 }
 
-footer {
+footer.style-projects {
   border-top: 1px solid #2d323f;
   padding: 1rem 1rem;
 }
 
-footer .contact {
+footer.style-projects .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,7 +310,7 @@ footer .contact {
 }
 
 @media screen and (min-width: 528px) {
-  footer .contact {
+  footer.style-projects .contact {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -320,7 +321,7 @@ footer .contact {
   }
 }
 
-footer .contact .f-line {
+footer.style-projects .contact .f-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,7 +333,7 @@ footer .contact .f-line {
           justify-content: center;
 }
 
-footer .contact .s-line {
+footer.style-projects .contact .s-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,20 +346,20 @@ footer .contact .s-line {
   gap: 0.3rem;
 }
 
-footer p {
+footer.style-projects p {
   color: #8b949e;
   font-size: 0.9rem;
   margin: 0 0.2rem;
   font-weight: 500;
 }
 
-footer span {
+footer.style-projects span {
   color: #936ac4;
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-footer svg {
+footer.style-projects svg {
   margin: 0 0.2rem;
   font-size: 1.3rem;
   color: #8b949e;
@@ -366,7 +367,7 @@ footer svg {
   transition: all 0.3s ease-in-out;
 }
 
-footer svg:hover {
+footer.style-projects svg:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
