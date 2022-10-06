@@ -8,11 +8,84 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function About() {
+  // interação e animação com as sessões do menu 'sobre'
+  const topicsRef = useRef();
+
   useEffect(() => {
     document.title = "Sobre | @felipesoarws";
-
     AOS.init();
-  }, []);
+    initialChanges();
+  });
+
+  const initialChanges = () => {
+    const topics = topicsRef.current.querySelectorAll(".line");
+
+    topics.forEach((topic) => {
+      resetSections();
+
+      const firstFolderOpen = document.querySelector(".line.bio");
+      openSection(firstFolderOpen);
+
+      if (topic.classList[1] === "open") {
+        openSection(topic);
+      } else {
+        closeSection(topic);
+      }
+    });
+  };
+
+  const topicsTab = (e) => {
+    const topicSelected = e.currentTarget;
+
+    // conteudos das sessões
+    const meFolder = document.querySelector(".folder.me");
+    const hobbiesFolder = document.querySelector(".folder.hobbies");
+    const stacksFolder = document.querySelector(".folder.stacks");
+
+    checkFolder(topicSelected, meFolder, hobbiesFolder, stacksFolder);
+  };
+
+  const resetSections = () => {
+    const topics = topicsRef.current.querySelectorAll(".line");
+    topics.forEach((topic) => closeSection(topic));
+  };
+
+  const openSection = (topic) => {
+    topic.classList.add("section-opened");
+    const arrow = topic.querySelector(".tag-title");
+    arrow.children[0].style.transform = "rotate(90deg)";
+  };
+
+  const closeSection = (topic) => {
+    topic.classList.remove("section-opened");
+    const arrow = topic.querySelector(".tag-title");
+    arrow.children[0].style.transform = "rotate(0deg)";
+  };
+
+  const checkFolder = (topic, meFolder, hobbiesFolder, stacksFolder) => {
+    const check = topic.classList[1];
+    if (check === "bio") {
+      meFolder.classList.toggle("closed");
+    } else if (check === "hobbies") {
+      hobbiesFolder.classList.toggle("closed");
+    } else if (check === "stacks") {
+      stacksFolder.classList.toggle("closed");
+    } else {
+      return;
+    }
+
+    const arrow = topic.querySelector(".tag-title");
+
+    if (topic.classList[2] === "section-opened") {
+      topic.classList.remove("section-opened");
+      arrow.children[0].style.transform = "rotate(0deg)";
+    } else {
+      topic.classList.add("section-opened");
+      arrow.children[0].style.transform = "rotate(90deg)";
+    }
+  };
+
+  // ---------------------------------------------------------------------------- //
 
   // conteudos dos arquivos
 
@@ -99,11 +172,11 @@ export default function About() {
       </header>
       <main className="style-about">
         <div className="interests-mobile">
-          <div className="lines">
-            <div className="line bio">
+          <div className="lines" ref={topicsRef}>
+            <div className="line bio" onClick={topicsTab}>
               <div className="about_me">
                 <div className="tag-title">
-                  <i className="fa-solid fa-caret-right"></i>
+                  <i className="fa-solid fa-caret-right "></i>
                   <span className="open_tab">sobre mim</span>
                 </div>
               </div>
@@ -148,7 +221,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="line hobbies">
+            <div className="line hobbies" onClick={topicsTab}>
               <div className="hobbies">
                 <div className="tag-title">
                   <i className="fa-solid fa-caret-right"></i>
@@ -157,7 +230,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="folder hobbies ">
+            <div className="folder hobbies closed">
               <div className="music">
                 <div className="folder_n_name">
                   <i className="fa-solid fa-headphones"></i>
@@ -191,7 +264,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="line stacks">
+            <div className="line stacks" onClick={topicsTab}>
               <div className="stacks">
                 <div className="tag-title">
                   <i className="fa-solid fa-caret-right"></i>
@@ -200,7 +273,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="folder stacks ">
+            <div className="folder stacks closed">
               <div className="js">
                 <div className="folder_n_name">
                   <i className="fa-brands fa-js"></i>
@@ -230,7 +303,6 @@ export default function About() {
               <div className="react">
                 <div className="folder_n_name">
                   <i className="fa-brands fa-react"></i>
-
                   <span className="open_folder">react</span>
                 </div>
               </div>
