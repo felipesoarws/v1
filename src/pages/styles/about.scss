@@ -174,14 +174,6 @@ body {
                     justify-content: start;
                     gap: 0.7rem;
 
-                    i {
-                        transform: rotate(0deg);
-
-                        &.rotate {
-                            transform: rotate(90deg);
-                        }
-                    }
-
                     span {
                         font-size: 0.9rem;
                         color: $gray;
@@ -272,6 +264,11 @@ body {
                 .sass {
                     svg {
                         color: #cd6799;
+                    }
+                }
+                .react {
+                    svg {
+                        color: #23ddff;
                     }
                 }
             }
