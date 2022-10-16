@@ -18,6 +18,7 @@ import todoapp_screen from "./assets/todoapp_screen.png";
 import gow_screen from "./assets/gow_screen.png";
 import disneyplus_screen from "./assets/disneyplus_screen.png";
 import calc_screen from "./assets/calc_screen.png";
+import vlrhub_screen from "./assets/vlrhub_screen.png";
 
 export default function About() {
   document.title = "Projetos | @felipesoarws";
@@ -119,6 +120,13 @@ export default function About() {
             image={gow_screen}
             url={"https://god-of-war-ragnarok-landing-page.vercel.app/"}
             data_duration={2900}
+          />
+              
+           <Project
+            title={"Website | Valorant Hub"}
+            image={vlrhub_screen}
+            url={"https://vlrgg.vercel.app/"}
+            data_duration={31v00}
           />
         </div>
       </main>
