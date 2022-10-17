@@ -122,12 +122,13 @@ export default function About() {
             data_duration={2900}
           />
               
-           <Project
+          /*  <Project
             title={"Website | Valorant Hub"}
             image={vlrhub_screen}
             url={"https://vlrgg.vercel.app/"}
             data_duration={3100}
           />
+          */
         </div>
       </main>
       <footer className="style-projects">
