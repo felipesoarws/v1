@@ -121,14 +121,6 @@ export default function About() {
             url={"https://god-of-war-ragnarok-landing-page.vercel.app/"}
             data_duration={2900}
           />
-              
-          /*  <Project
-            title={"Website | Valorant Hub"}
-            image={vlrhub_screen}
-            url={"https://vlrgg.vercel.app/"}
-            data_duration={3100}
-          />
-          */
         </div>
       </main>
       <footer className="style-projects">
