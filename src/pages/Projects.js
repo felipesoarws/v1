@@ -126,7 +126,7 @@ export default function About() {
             title={"Website | Valorant Hub"}
             image={vlrhub_screen}
             url={"https://vlrgg.vercel.app/"}
-            data_duration={3100}
+            data_duration={2900}
           />
         </div>
       </main>
