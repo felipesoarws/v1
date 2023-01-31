@@ -19,6 +19,7 @@ import gow_screen from "./assets/gow_screen.png";
 import disneyplus_screen from "./assets/disneyplus_screen.png";
 import calc_screen from "./assets/calc_screen.png";
 import vlrhub_screen from "./assets/vlrhub_screen.png";
+import tmdb_screen from "./assets/tmdb_screen.png";
 
 export default function About() {
   document.title = "Projetos | @felipesoarws";
@@ -126,6 +127,13 @@ export default function About() {
             title={"Website | Valorant Hub"}
             image={vlrhub_screen}
             url={"https://vlrgg.vercel.app/"}
+            data_duration={2900}
+          />
+              
+              <Project
+            title={"Website | TMDB API"}
+            image={tmdb_screen}
+            url={"https://themoviedatabase-api.vercel.app/"}
             data_duration={2900}
           />
         </div>
