@@ -388,6 +388,10 @@ body main.style-about .interests-mobile .folder .sass svg {
   color: #cd6799;
 }
 
+body main.style-about .interests-mobile .folder .gads svg {
+  color: #008744;
+}
+
 body main.style-about .contents {
   margin: 2rem;
 }
