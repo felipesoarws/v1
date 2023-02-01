@@ -309,7 +309,7 @@ export default function About() {
 
               <div className="gads">
                 <div className="folder_n_name">
-                  <i className="fa-brands fa-google"></i>
+                  <i className="fa-brands fa-google" style={{ color: "#008744" }}></i>
                   <span className="open_folder">google ads</span>
                 </div>
               </div>
