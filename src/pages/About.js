@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import {SiGoogleads} from 'react-icons/si';
 
 import "./styles/about.scss";
 
@@ -448,6 +449,7 @@ export default function About() {
           <div className="s-line">
             <p>ou em </p>
             <span>felipesoarwz@gmail.com</span>
+<SiGoogleads/>
           </div>
         </div>
       </footer>
