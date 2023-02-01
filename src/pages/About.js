@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import {SiGoogleads} from 'react-icons/si';
 
 import "./styles/about.scss";
 
@@ -307,6 +306,14 @@ export default function About() {
                   <span className="open_folder">react</span>
                 </div>
               </div>
+
+              <div className="react">
+                <div className="folder_n_name">
+                  <i className="fa-brands fa-google"></i>
+                  <span className="open_folder">google ads</span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -449,7 +456,6 @@ export default function About() {
           <div className="s-line">
             <p>ou em </p>
             <span>felipesoarwz@gmail.com</span>
-<SiGoogleads/>
           </div>
         </div>
       </footer>
