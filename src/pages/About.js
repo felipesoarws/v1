@@ -313,6 +313,13 @@ export default function About() {
                   <span className="open_folder">google ads</span>
                 </div>
               </div>
+          
+              <div className="ganalytics">
+                <div className="folder_n_name">
+                  <i className="fa-solid fa-chart-simple" style={{ color: "#E37400" }}></i>
+                  <span className="open_folder">google ads</span>
+                </div>
+              </div>
 
             </div>
           </div>
