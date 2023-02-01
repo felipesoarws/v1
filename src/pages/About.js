@@ -307,7 +307,7 @@ export default function About() {
                 </div>
               </div>
 
-              <div className="react">
+              <div className="gads">
                 <div className="folder_n_name">
                   <i className="fa-brands fa-google"></i>
                   <span className="open_folder">google ads</span>
