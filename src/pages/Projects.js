@@ -78,7 +78,7 @@ export default function About() {
           */
 
           <Project
-            title={"Jogo da Velha"}
+            title={"Jogo | Jogo da Velha"}
             image={tictactoe_screen}
             url={"https://tic-tac-toe-bice-five.vercel.app/"}
             data_duration={1700}
