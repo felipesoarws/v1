@@ -68,12 +68,14 @@ export default function About() {
           </div>
         </div>
         <div className="projects">
+          /* 
           <Project
             title={"Desafio | Timetracking"}
             image={timetracking_screen}
             url={"https://time-tracking-dashboard-main-omega.vercel.app/"}
             data_duration={1500}
           />
+          */
 
           <Project
             title={"Jogo da Velha"}
