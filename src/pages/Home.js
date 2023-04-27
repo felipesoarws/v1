@@ -15,7 +15,6 @@ export default function Home() {
 
   useEffect(() => {
     document.title = "Hello World! | @felipesoarws";
-
     AOS.init();
 
     const submit = submitRef.current;
@@ -74,7 +73,8 @@ export default function Home() {
               Felipe <span className="name">Soares</span>
             </h1>
             <p>
-              Estudante de programação <span className="color">front-end</span>
+              <span className="text first-text"> Estudante de programação</span>{" "}
+              <span className="text sec-text color">front-end</span>
             </p>
           </div>
 

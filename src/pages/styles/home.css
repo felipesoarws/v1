@@ -1,33 +1,26 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   list-style-type: none;
   text-decoration: none;
-  -webkit-text-decoration-color: white;
-          text-decoration-color: white;
+  text-decoration-color: white;
   scroll-behavior: smooth;
   font-family: "Fira Code", monospace;
 }
-
 * img {
   width: 100%;
 }
-
 * body::-webkit-scrollbar {
   width: 13px;
 }
-
 * body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
-
 * body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
-
 * body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
   border-radius: 20px;
@@ -35,45 +28,25 @@
 }
 
 body {
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #0d1117;
 }
-
 body header.style-home {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-
 body header.style-home .themes {
   padding: 0.7rem 1.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
-
 body header.style-home .themes .colors {
   display: none;
 }
-
 body header.style-home .themes .colors span {
   display: block;
   width: 0.8rem;
@@ -82,56 +55,38 @@ body header.style-home .themes .colors span {
   border-radius: 2rem;
   margin: 0.23rem 0.25rem;
 }
-
 @media screen and (min-width: 768px) {
   body header.style-home .themes .colors {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
-
 body header.style-home .themes .title h1 {
   color: #4b4f54;
   font-size: 0.9rem;
   font-weight: 400;
 }
-
 @media screen and (min-width: 768px) {
   body header.style-home .themes .title h1 {
     margin-left: 5rem;
   }
 }
-
 body header.style-home nav {
-  -webkit-box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.4);
   height: 3.7rem;
   width: 100%;
 }
-
 body header.style-home nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   background-color: #010409;
 }
-
 @media screen and (min-width: 768px) {
   body header.style-home nav ul {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    justify-content: start;
   }
 }
-
 body header.style-home nav ul li {
   background-color: #010409;
   width: 33.3vw;
@@ -140,147 +95,133 @@ body header.style-home nav ul li {
   color: #8b949e;
   font-size: 0.9rem;
 }
-
 @media screen and (min-width: 768px) {
   body header.style-home nav ul li {
     width: 20vw;
   }
 }
-
 @media screen and (min-width: 1000px) {
   body header.style-home nav ul li {
     width: 13vw;
   }
 }
-
 body header.style-home nav ul li.selected {
   background-color: #0d1117;
   color: #d7a84b;
   border: 0;
   border-top: 2px solid #bf616a;
 }
-
 body header.style-home nav ul a {
   color: #8b949e;
   display: block;
   padding: 0.7rem 1rem;
   width: 33.3vw;
 }
-
 @media screen and (min-width: 768px) {
   body header.style-home nav ul a {
     width: 20vw;
   }
 }
-
 @media screen and (min-width: 1000px) {
   body header.style-home nav ul a {
     width: 13vw;
   }
 }
-
 body header.style-home nav ul a.selected {
   background-color: #0d1117;
   color: #d7a84b;
   border: 0;
   border-top: 2px solid #bf616a;
 }
-
 body main.style-home {
   min-height: 70vh;
 }
-
 @media screen and (min-width: 768px) {
   body main.style-home {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
     padding: 2rem;
     height: 75vh;
     margin: 2rem 0;
   }
 }
-
 @media screen and (min-width: 1200px) {
   body main.style-home {
     margin: 0;
   }
 }
-
 body main.style-home .content {
   text-align: center;
   margin: 2.3rem 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
 @media screen and (min-width: 768px) {
   body main.style-home .content {
     text-align: center;
   }
 }
-
 @media screen and (min-width: 1024px) {
   body main.style-home .content {
     text-align: left;
   }
 }
-
 body main.style-home .content .texts {
   width: 100%;
 }
-
+body main.style-home .content .texts p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+body main.style-home .content .texts .text {
+  position: relative;
+}
+body main.style-home .content .texts .text.first-text {
+  color: white;
+}
+body main.style-home .content .texts .text.sec-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #0d1117;
+  border-left: 2px solid #936ac4;
+  animation: animate 4s steps(12) infinite;
+}
 body main.style-home .content .texts span.name {
   display: inline;
   font-size: 2.2rem;
   color: #d7a84b;
   font-weight: bold;
 }
-
 @media screen and (min-width: 768px) {
   body main.style-home .content .texts span.name {
     font-size: 4.5rem;
     display: block;
   }
 }
-
 body main.style-home .content span,
 body main.style-home .content h1 {
   color: white;
 }
-
 body main.style-home .content span {
   font-size: 0.9rem;
   display: block;
   margin: 0.4rem 0;
 }
-
 body main.style-home .content h1 {
   font-size: 2.2rem;
   font-weight: 600;
   color: #d7a84b;
 }
-
 @media screen and (min-width: 768px) {
   body main.style-home .content h1 {
     font-size: 4.5rem;
@@ -288,55 +229,41 @@ body main.style-home .content h1 {
     margin: 1rem 0;
   }
 }
-
 body main.style-home .content p {
   color: white;
   font-size: 0.9rem;
 }
-
 body main.style-home .content p span.color {
   display: inline;
   color: #936ac4;
   font-weight: bold;
   font-size: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   body main.style-home .content p {
     font-size: 1rem;
   }
 }
-
 body main.style-home .content .code {
   margin: 4rem 0;
   position: relative;
   text-align: center;
 }
-
 body main.style-home .content .code p {
   color: white;
   font-size: 0.9rem;
 }
-
 body main.style-home .content .code .input {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  align-items: center;
+  justify-content: start;
   gap: 0.4rem;
   position: relative;
 }
-
 body main.style-home .content .code .input span {
   color: pink;
   font-size: 1.2rem;
 }
-
 body main.style-home .content .code .input input {
   background-color: transparent;
   outline: 0;
@@ -344,23 +271,12 @@ body main.style-home .content .code .input input {
   color: pink;
   font-size: 0.9rem;
 }
-
-body main.style-home .content .code .input input::-webkit-input-placeholder {
+body main.style-home .content .code .input input::-moz-placeholder {
   color: rgba(255, 192, 203, 0.4);
 }
-
-body main.style-home .content .code .input input:-ms-input-placeholder {
-  color: rgba(255, 192, 203, 0.4);
-}
-
-body main.style-home .content .code .input input::-ms-input-placeholder {
-  color: rgba(255, 192, 203, 0.4);
-}
-
 body main.style-home .content .code .input input::placeholder {
   color: rgba(255, 192, 203, 0.4);
 }
-
 body main.style-home .content .code span.line {
   position: absolute;
   display: block;
@@ -370,105 +286,72 @@ body main.style-home .content .code span.line {
   bottom: 0;
   left: 1.2rem;
 }
-
 body main.style-home .bg {
   display: none;
 }
-
 @media screen and (min-width: 1000px) {
   body main.style-home .bg {
     display: block;
   }
 }
-
 body main.style-home .bg img {
   width: 23rem;
-  -webkit-filter: drop-shadow(5px 5px 15px rgba(147, 106, 196, 0.1));
-          filter: drop-shadow(5px 5px 15px rgba(147, 106, 196, 0.1));
+  filter: drop-shadow(5px 5px 15px rgba(147, 106, 196, 0.1));
 }
-
 body footer.style-home {
   border-top: 1px solid #2d323f;
   padding: 1rem 1rem;
 }
-
 body footer.style-home .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 0.7rem;
 }
-
 @media screen and (min-width: 528px) {
   body footer.style-home .contact {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
-
 body footer.style-home .contact .f-line {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 body footer.style-home .contact .s-line {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 0.3rem;
 }
-
 body footer.style-home p {
   color: #8b949e;
   font-size: 0.9rem;
   margin: 0 0.2rem;
   font-weight: 500;
 }
-
 body footer.style-home span {
   color: #936ac4;
   font-size: 0.9rem;
   font-weight: 500;
 }
-
 body footer.style-home svg {
   margin: 0 0.2rem;
   font-size: 1.3rem;
   color: #8b949e;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 body footer.style-home svg:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
-/*# sourceMappingURL=home.css.map */
+
+@keyframes animate {
+  40%, 60% {
+    left: calc(100% + 4px);
+  }
+  100% {
+    left: 0%;
+  }
+}/*# sourceMappingURL=home.css.map */
