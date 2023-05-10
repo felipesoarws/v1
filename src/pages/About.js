@@ -300,6 +300,13 @@ export default function About() {
                   <span className="open_folder">sass</span>
                 </div>
               </div>
+              <div className="gads">
+                <div className="folder_n_name">
+                  <i className="fa-brands fa-node"></i>
+                  <span className="open_folder">node</span>
+                </div>
+              </div>
+
               <div className="react">
                 <div className="folder_n_name">
                   <i className="fa-brands fa-react"></i>
